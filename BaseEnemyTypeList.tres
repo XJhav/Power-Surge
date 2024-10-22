@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyTypeList" load_steps=8 format=3 uid="uid://7voxuc3gl7ll"]
+
+[ext_resource type="Resource" uid="uid://dhwwanngxlypk" path="res://Enemies/Basic.tres" id="1_a0ymt"]
+[ext_resource type="Script" path="res://Scripts/EnemyClass.gd" id="1_bxcxs"]
+[ext_resource type="Script" path="res://Scripts/BaseEnemyTypes.gd" id="1_xla3r"]
+[ext_resource type="Resource" uid="uid://dqeub8soxxlo5" path="res://Enemies/BasicShooter.tres" id="2_q85dg"]
+[ext_resource type="Resource" uid="uid://2xul2is4r5r4" path="res://Enemies/Flyer.tres" id="3_2cddn"]
+[ext_resource type="Resource" uid="uid://bpkmyvs1kc8nx" path="res://Enemies/SmallGuys.tres" id="4_d33wt"]
+[ext_resource type="Resource" uid="uid://dvef3pbo8daql" path="res://Enemies/Wizard.tres" id="5_1pxb0"]
+
+[resource]
+script = ExtResource("1_xla3r")
+enemy_types = Array[ExtResource("1_bxcxs")]([ExtResource("1_a0ymt"), ExtResource("2_q85dg"), ExtResource("3_2cddn"), ExtResource("4_d33wt"), ExtResource("5_1pxb0")])

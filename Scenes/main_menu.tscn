@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://cte5qp2h0o56b"]
+
+[ext_resource type="Script" path="res://Main Menu.gd" id="1_osqfl"]
+[ext_resource type="Texture2D" uid="uid://b7jroxfp1y3ad" path="res://Sprites/PlayButton1.png" id="2_r2s8k"]
+[ext_resource type="Texture2D" uid="uid://cu6efqrw5yv4k" path="res://Sprites/PlayButton3.png" id="3_w1jis"]
+[ext_resource type="Texture2D" uid="uid://1mpvnct4dx8y" path="res://Sprites/PlayButton2.png" id="4_eymrg"]
+[ext_resource type="Texture2D" uid="uid://bhe4tujd0nll" path="res://Sprites/UI/Title.png" id="5_h20vo"]
+[ext_resource type="Shader" path="res://Scripts/PaletteLimitting.gdshader" id="5_xuase"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8sl01"]
+shader = ExtResource("5_xuase")
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_osqfl")
+
+[node name="Menu Menu UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="TextureButton" parent="Menu Menu UI"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 171.0
+offset_right = 284.0
+offset_bottom = 197.0
+texture_normal = ExtResource("2_r2s8k")
+texture_pressed = ExtResource("3_w1jis")
+texture_hover = ExtResource("4_eymrg")
+
+[node name="Title" type="TextureRect" parent="Menu Menu UI"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 25.0
+offset_right = 350.0
+offset_bottom = 153.0
+texture = ExtResource("5_h20vo")
+stretch_mode = 2
+
+[node name="Line2D" type="Line2D" parent="Menu Menu UI"]
+z_index = -1
+points = PackedVector2Array(-5, 68, 29, 109, 55, 125, 81, 133, 102, 135, 129, 133, 154, 121, 172, 106, 189, 88, 203, 71, 216, 57, 234, 39, 250, 28, 279, 15, 301, 11, 327, 11, 351, 18, 367, 26, 382, 37, 402, 50, 425, 56, 456, 57, 474, 45, 486, 32)
+default_color = Color(0.12549, 0.235294, 0.337255, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D2" type="Line2D" parent="Menu Menu UI"]
+z_index = -1
+position = Vector2(479, -42)
+rotation = -0.307178
+scale = Vector2(-1.2, 1.2)
+points = PackedVector2Array(-5, 68, 29, 109, 55, 125, 81, 133, 102, 135, 129, 133, 154, 121, 172, 106, 189, 88, 203, 71, 216, 57, 234, 39, 250, 28, 279, 15, 301, 11, 327, 11, 351, 18, 367, 26, 382, 37, 402, 50, 425, 56, 456, 57, 474, 45, 486, 32)
+width = 8.333
+default_color = Color(0.329412, 0.305882, 0.407843, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Desc Label" type="Label" parent="Menu Menu UI"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 200.0
+offset_right = 308.0
+offset_bottom = 263.0
+theme_override_colors/font_shadow_color = Color(0.329412, 0.305882, 0.407843, 1)
+text = "CONTROLS:
+    - Move: WASD
+    - Shoot: Left Click / Space
+    - Switch Weapon: E"
+
+[node name="JhaX" type="Label" parent="Menu Menu UI"]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 230.0
+offset_right = 562.0
+offset_bottom = 291.0
+theme_override_colors/font_shadow_color = Color(0.329412, 0.305882, 0.407843, 1)
+text = "By: JhaX Games
+For Swap Jam!"
+
+[node name="PaletteLimittingLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="PaletteLimittingLayer"]
+material = SubResource("ShaderMaterial_8sl01")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Menu Menu UI/PlayButton" to="." method="_on_play_button_pressed"]

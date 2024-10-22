@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2xj72j2cbeg0"]
+
+[ext_resource type="Script" path="res://Scripts/debuff_option.gd" id="1_5gugh"]
+[ext_resource type="Texture2D" uid="uid://ybegqcmtrday" path="res://Sprites/UI/SmallSymbols1.png" id="1_dn7vg"]
+[ext_resource type="Texture2D" uid="uid://dhjestmtsu2l0" path="res://Sprites/UI/DebuffButton1.png" id="1_j66e0"]
+[ext_resource type="Texture2D" uid="uid://cnpatlf16078b" path="res://Sprites/UI/DebuffButton2.png" id="2_11vw3"]
+[ext_resource type="Texture2D" uid="uid://dobsul3jhsmh5" path="res://Sprites/UI/DebuffButton3.png" id="2_nk2o7"]
+[ext_resource type="Texture2D" uid="uid://cy0in38hqepvv" path="res://Sprites/UI/SmallSymbols2.png" id="7_pl3bx"]
+[ext_resource type="Texture2D" uid="uid://117kwa2hc84m" path="res://Sprites/UI/SmallSymbols3.png" id="8_lgbtf"]
+
+[node name="DebuffOption" type="TextureButton" groups=["Debuff Button"]]
+z_index = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -394.0
+offset_bottom = -205.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_j66e0")
+texture_pressed = ExtResource("2_nk2o7")
+texture_hover = ExtResource("2_11vw3")
+script = ExtResource("1_5gugh")
+melee_sprite = ExtResource("1_dn7vg")
+ranged_sprite = ExtResource("7_pl3bx")
+enemy_sprite = ExtResource("8_lgbtf")
+
+[node name="Symbol" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 37.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 23.0
+texture = ExtResource("1_dn7vg")
+stretch_mode = 2
+
+[node name="LabelVBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 87.0
+offset_bottom = 65.0
+
+[node name="Label1" type="Label" parent="LabelVBox"]
+layout_mode = 2
+text = "Amplitude: -1"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="LabelVBox"]
+layout_mode = 2
+text = "Vert. Shift: -1"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

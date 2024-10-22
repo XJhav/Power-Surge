@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2kdt01hhr638"]
+
+[ext_resource type="Script" path="res://Scripts/DebuffMenu.gd" id="1_0gs8a"]
+
+[sub_resource type="Gradient" id="Gradient_p5gg6"]
+offsets = PackedFloat32Array(0, 0.125786, 0.874214, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.435294, 0, 0, 0, 0.435294, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rc8ya"]
+gradient = SubResource("Gradient_p5gg6")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3crry"]
+texture = SubResource("GradientTexture2D_rc8ya")
+
+[node name="DebuffMenu" type="Panel" groups=["Debuff Menu"]]
+z_index = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3crry")
+script = ExtResource("1_0gs8a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 145.0
+offset_right = 284.0
+offset_bottom = 354.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 117.0
+offset_right = 320.0
+offset_bottom = 130.0
+text = "Select a Sacrifice:"
+horizontal_alignment = 1

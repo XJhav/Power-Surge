@@ -1,0 +1,94 @@
+[gd_scene load_steps=17 format=3 uid="uid://byputsydfyxqv"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_403gv"]
+[ext_resource type="PackedScene" uid="uid://cboqo8g0h6mrg" path="res://Scenes/player.tscn" id="1_in5qo"]
+[ext_resource type="Script" path="res://Scripts/SoundClass.gd" id="2_b87f2"]
+[ext_resource type="AudioStream" uid="uid://qn43fuqdfja5" path="res://Sounds/SwordSwipe.mp3" id="3_15l74"]
+[ext_resource type="PackedScene" uid="uid://i7el8snxgahn" path="res://Scenes/ui.tscn" id="3_klj0f"]
+[ext_resource type="AudioStream" uid="uid://bkktelppqdew6" path="res://Sounds/ShootSound.mp3" id="3_meghw"]
+[ext_resource type="Shader" path="res://Scripts/PaletteLimitting.gdshader" id="4_3jdmy"]
+[ext_resource type="PackedScene" uid="uid://1j6lorkisgc7" path="res://Scenes/enemy_spawner.tscn" id="4_ak88r"]
+[ext_resource type="AudioStream" uid="uid://bflo07tpafyvo" path="res://Sounds/TakeDamage.mp3" id="5_kljv7"]
+[ext_resource type="Texture2D" uid="uid://cuckyw6mitkd7" path="res://Sprites/UI/Ground.png" id="5_xepie"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="11_wdqqy"]
+[ext_resource type="Script" path="res://Scripts/GraphManager.gd" id="12_2myq1"]
+
+[sub_resource type="Resource" id="Resource_fa41y"]
+script = ExtResource("2_b87f2")
+sound_file = ExtResource("3_meghw")
+volume = -10.0
+
+[sub_resource type="Resource" id="Resource_w17yi"]
+script = ExtResource("2_b87f2")
+sound_file = ExtResource("3_15l74")
+volume = -20.0
+
+[sub_resource type="Resource" id="Resource_wqexs"]
+script = ExtResource("2_b87f2")
+sound_file = ExtResource("5_kljv7")
+volume = -20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l6nw6"]
+shader = ExtResource("4_3jdmy")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_403gv")
+
+[node name="Player" parent="." instance=ExtResource("1_in5qo")]
+shoot_sound = SubResource("Resource_fa41y")
+swing_sound = SubResource("Resource_w17yi")
+damage_sound = SubResource("Resource_wqexs")
+move_speed = 10.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("3_klj0f")]
+mouse_filter = 2
+
+[node name="PaletteLimittingLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="PaletteLimittingLayer"]
+material = SubResource("ShaderMaterial_l6nw6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Enemy Spawner" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(-100, 20)
+
+[node name="Enemy Spawner8" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(-100, -20)
+
+[node name="Enemy Spawner2" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(100, -20)
+
+[node name="Enemy Spawner7" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(100, 20)
+
+[node name="Enemy Spawner3" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(-40, 75)
+
+[node name="Enemy Spawner6" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(40, 75)
+
+[node name="Enemy Spawner4" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(-40, -75)
+
+[node name="Enemy Spawner5" parent="." instance=ExtResource("4_ak88r")]
+position = Vector2(40, -75)
+
+[node name="Ground" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("5_xepie")
+
+[node name="GameManager" type="Node2D" parent="." groups=["GameManager"]]
+script = ExtResource("11_wdqqy")
+
+[node name="GraphManager" type="Node2D" parent="." groups=["GraphManager"]]
+script = ExtResource("12_2myq1")

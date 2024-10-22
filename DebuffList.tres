@@ -1,0 +1,120 @@
+[gd_resource type="Resource" script_class="DebuffList" load_steps=17 format=3 uid="uid://bue6kdmdrygws"]
+
+[ext_resource type="Script" path="res://Scripts/DebuffListClass.gd" id="1_d6wio"]
+[ext_resource type="Script" path="res://Scripts/DebuffClass.gd" id="1_s5g4a"]
+
+[sub_resource type="Resource" id="Resource_640x1"]
+script = ExtResource("1_s5g4a")
+wave_type = "Enemy"
+wave_parameter_1 = "Amplitude"
+value_change_1 = 1
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = 1
+
+[sub_resource type="Resource" id="Resource_opqsn"]
+script = ExtResource("1_s5g4a")
+wave_type = "Melee"
+wave_parameter_1 = "Frequency"
+value_change_1 = 2
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -2
+
+[sub_resource type="Resource" id="Resource_cv2w4"]
+script = ExtResource("1_s5g4a")
+wave_type = "Ranged"
+wave_parameter_1 = "Amplitude"
+value_change_1 = 1
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -1
+
+[sub_resource type="Resource" id="Resource_mgl0t"]
+script = ExtResource("1_s5g4a")
+wave_type = "Melee"
+wave_parameter_1 = "Amplitude"
+value_change_1 = -1
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -2
+
+[sub_resource type="Resource" id="Resource_17bnf"]
+script = ExtResource("1_s5g4a")
+wave_type = "Ranged"
+wave_parameter_1 = "Frequency"
+value_change_1 = -2
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -1
+
+[sub_resource type="Resource" id="Resource_bt0nn"]
+script = ExtResource("1_s5g4a")
+wave_type = "Enemy"
+wave_parameter_1 = "Amplitude"
+value_change_1 = -1
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = 2
+
+[sub_resource type="Resource" id="Resource_k6kmb"]
+script = ExtResource("1_s5g4a")
+wave_type = "Ranged"
+wave_parameter_1 = "Vert. Shift"
+value_change_1 = -2
+wave_parameter_2 = "Frequency"
+value_change_2 = 1
+
+[sub_resource type="Resource" id="Resource_tn5vr"]
+script = ExtResource("1_s5g4a")
+wave_type = "Melee"
+wave_parameter_1 = "Amplitude"
+value_change_1 = 1
+wave_parameter_2 = "Frequency"
+value_change_2 = 1
+
+[sub_resource type="Resource" id="Resource_frkx3"]
+script = ExtResource("1_s5g4a")
+wave_type = "Enemy"
+wave_parameter_1 = "Frequency"
+value_change_1 = -1
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = 1
+
+[sub_resource type="Resource" id="Resource_80jqv"]
+script = ExtResource("1_s5g4a")
+wave_type = "Melee"
+wave_parameter_1 = "Frequency"
+value_change_1 = 2
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -1
+
+[sub_resource type="Resource" id="Resource_e13la"]
+script = ExtResource("1_s5g4a")
+wave_type = "Melee"
+wave_parameter_1 = "Amplitude"
+value_change_1 = 1
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -2
+
+[sub_resource type="Resource" id="Resource_f47v8"]
+script = ExtResource("1_s5g4a")
+wave_type = "Enemy"
+wave_parameter_1 = "Vert. Shift"
+value_change_1 = 2
+wave_parameter_2 = "Frequency"
+value_change_2 = 1
+
+[sub_resource type="Resource" id="Resource_a2wut"]
+script = ExtResource("1_s5g4a")
+wave_type = "Enemy"
+wave_parameter_1 = "Vert. Shift"
+value_change_1 = 1
+wave_parameter_2 = "Amplitude"
+value_change_2 = 1
+
+[sub_resource type="Resource" id="Resource_qxs6o"]
+script = ExtResource("1_s5g4a")
+wave_type = "Ranged"
+wave_parameter_1 = "Amplitude"
+value_change_1 = 2
+wave_parameter_2 = "Vert. Shift"
+value_change_2 = -1
+
+[resource]
+script = ExtResource("1_d6wio")
+possible_debuffs = Array[ExtResource("1_s5g4a")]([SubResource("Resource_640x1"), SubResource("Resource_opqsn"), SubResource("Resource_cv2w4"), SubResource("Resource_mgl0t"), SubResource("Resource_17bnf"), SubResource("Resource_bt0nn"), SubResource("Resource_k6kmb"), SubResource("Resource_tn5vr"), SubResource("Resource_frkx3"), SubResource("Resource_80jqv"), SubResource("Resource_e13la"), SubResource("Resource_f47v8"), SubResource("Resource_a2wut"), SubResource("Resource_qxs6o")])

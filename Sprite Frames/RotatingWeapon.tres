@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://b0i8843pl6ys2"]
+
+[ext_resource type="Texture2D" uid="uid://bimqbrgnolumu" path="res://Sprites/Wandpng.png" id="1_w153y"]
+[ext_resource type="Texture2D" uid="uid://bxnpt7l1m1kfu" path="res://Sprites/sword1.png" id="2_88sdw"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w153y")
+}],
+"loop": true,
+"name": &"Gun",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_88sdw")
+}],
+"loop": true,
+"name": &"Sword",
+"speed": 5.0
+}]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://caahb8yveqthu"]
+
+[ext_resource type="Script" path="res://Scripts/EnemyBullet.gd" id="1_7nc6t"]
+[ext_resource type="Texture2D" uid="uid://csfliy5yalcuq" path="res://Sprites/bullet1.png" id="2_fmble"]
+[ext_resource type="Texture2D" uid="uid://dworxt8y8k1q6" path="res://Sprites/bullet2.png" id="3_prv5o"]
+[ext_resource type="Texture2D" uid="uid://cidfyeb5ite8w" path="res://Sprites/bullet3.png" id="4_ttxps"]
+[ext_resource type="Texture2D" uid="uid://wyctx2b1k3e5" path="res://Sprites/bullet4.png" id="5_b3v4a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_54gpe"]
+
+[node name="EnemyBullet" type="Area2D" groups=["Enemy Bullet"]]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_7nc6t")
+sprites = Array[Texture2D]([ExtResource("2_fmble"), ExtResource("3_prv5o"), ExtResource("4_ttxps"), ExtResource("5_b3v4a")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CircleShape2D_54gpe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fmble")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

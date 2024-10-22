@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv8pfo85itd03"]
+
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="1_43n5g"]
+[ext_resource type="Texture2D" uid="uid://bpjti7rlgtflk" path="res://Sprites/pickup1.png" id="2_jrygl"]
+[ext_resource type="Texture2D" uid="uid://d1xyuqyowy635" path="res://Sprites/pickup2.png" id="3_tkeup"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nii5t"]
+size = Vector2(10, 8)
+
+[node name="Pickup" type="Area2D" groups=["Pickup"]]
+script = ExtResource("1_43n5g")
+heart_sprite = ExtResource("2_jrygl")
+mana_sprite = ExtResource("3_tkeup")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jrygl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nii5t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

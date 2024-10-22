@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://bpkmyvs1kc8nx"]
+
+[ext_resource type="Script" path="res://Scripts/EnemyClass.gd" id="1_hsvns"]
+[ext_resource type="SpriteFrames" uid="uid://c3uta7ty4jg7b" path="res://Sprite Frames/SmallGuysEnemy.tres" id="2_hsyqh"]
+
+[resource]
+script = ExtResource("1_hsvns")
+sprite_frames = ExtResource("2_hsyqh")
+base_max_health = 15
+base_speed = 10.0
+attack_type = "Melee"
+time_between_shots = 0.5
+base_damage = 1
+bullet_color = "Orange"
+drop_change = 0.25

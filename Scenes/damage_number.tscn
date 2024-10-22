@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6e7bw6s45rq4"]
+
+[ext_resource type="Script" path="res://DamageNumber.gd" id="1_gktx3"]
+
+[node name="DamageNumber" type="Label"]
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -7.0
+offset_right = -466.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50"
+horizontal_alignment = 1
+script = ExtResource("1_gktx3")

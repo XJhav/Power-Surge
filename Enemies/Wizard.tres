@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://dvef3pbo8daql"]
+
+[ext_resource type="Script" path="res://Scripts/EnemyClass.gd" id="1_ou8pe"]
+[ext_resource type="SpriteFrames" uid="uid://dvky8y0blqcek" path="res://Sprite Frames/Wizard.tres" id="2_in75u"]
+
+[resource]
+script = ExtResource("1_ou8pe")
+sprite_frames = ExtResource("2_in75u")
+base_max_health = 15
+base_speed = 25.0
+attack_type = "Ranged"
+time_between_shots = 1.75
+base_damage = 1
+bullet_color = "Purple"
+drop_change = 0.4

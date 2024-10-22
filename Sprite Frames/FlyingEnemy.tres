@@ -1,0 +1,26 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bdktrp2gatqus"]
+
+[ext_resource type="Texture2D" uid="uid://cgit04iiq8mkh" path="res://Sprites/Characters/enemies4.png" id="1_vsio4"]
+[ext_resource type="Texture2D" uid="uid://ws4wdrip7shw" path="res://Sprites/Characters/enemies5.png" id="2_xkmdc"]
+[ext_resource type="Texture2D" uid="uid://cack55i3sagyk" path="res://Sprites/Characters/enemies6.png" id="3_xl1b8"]
+[ext_resource type="Texture2D" uid="uid://ct4nl3j8rove" path="res://Sprites/Characters/enemies7.png" id="4_3sckj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vsio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xkmdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xl1b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3sckj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="WaveStats" load_steps=2 format=3 uid="uid://c3ff43gksrkxx"]
+
+[ext_resource type="Script" path="res://Scripts/BaseWaveStatsClass.gd" id="1_fifr0"]
+
+[resource]
+script = ExtResource("1_fifr0")
+time_scaling_constant = 0.5
+melee_amplitude = 3.0
+melee_frequency = 1.0
+melee_add_on = 6.0
+ranged_amplitude = 3.0
+ranged_frequency = 1.0
+ranged_add_on = 6.0
+enemy_amplitude = 2.0
+enemy_frequency = 2.0
+enemy_add_on = 2.0

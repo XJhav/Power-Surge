@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://y40f0dw8wfo7"]
+
+[ext_resource type="Texture2D" uid="uid://d3046q6u8p4kd" path="res://Sprites/Characters/Player1.png" id="1_xkwuc"]
+[ext_resource type="Texture2D" uid="uid://d4fo0j8ppx4cb" path="res://Sprites/Characters/Player2.png" id="2_dby25"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xkwuc")
+}],
+"loop": true,
+"name": &"Downfacing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dby25")
+}],
+"loop": true,
+"name": &"Upfacing",
+"speed": 5.0
+}]

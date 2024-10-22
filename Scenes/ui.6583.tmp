@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://i7el8snxgahn"]
+
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_66lv0"]
+[ext_resource type="Texture2D" uid="uid://q3outy45v6m4" path="res://Sprites/UpLeftHUD.png" id="1_stnks"]
+[ext_resource type="Texture2D" uid="uid://cm8kwbjop51y" path="res://Sprites/ProgressBar3.png" id="2_plgo0"]
+[ext_resource type="Texture2D" uid="uid://c0338h4np35j3" path="res://Sprites/ProgressBar1.png" id="3_dncr1"]
+[ext_resource type="Texture2D" uid="uid://exxhhcg7cvig" path="res://Sprites/ProgressBar2.png" id="4_f0f5c"]
+[ext_resource type="Texture2D" uid="uid://bx47nlws3yi0d" path="res://Sprites/DownLeftHUD.png" id="5_cmkba"]
+
+[node name="UI" type="Control" groups=["UI"]]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_66lv0")
+metadata/_edit_use_anchors_ = true
+
+[node name="UpLeftHUD" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_stnks")
+stretch_mode = 2
+
+[node name="HP Bar" type="TextureProgressBar" parent="UpLeftHUD"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 3.0
+offset_right = 120.0
+offset_bottom = 43.0
+value = 90.0
+texture_under = ExtResource("2_plgo0")
+texture_progress = ExtResource("3_dncr1")
+
+[node name="Mana Bar" type="TextureProgressBar" parent="UpLeftHUD"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 14.0
+offset_right = 120.0
+offset_bottom = 54.0
+value = 50.0
+texture_under = ExtResource("2_plgo0")
+texture_progress = ExtResource("4_f0f5c")
+
+[node name="DownLeftHUD" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 171.0
+offset_right = 75.0
+offset_bottom = 270.0
+grow_vertical = 0
+texture = ExtResource("5_cmkba")
+
+[node name="SwordIcon" type="TextureRect" parent="DownLeftHUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SwordLine" type="Line2D" parent="DownLeftHUD"]
+position = Vector2(4, 52)
+points = PackedVector2Array(0, 0, 9, 11, 18, 15, 27, 11, 36, 0, 45, -11, 54, -15)
+width = 2.0
+default_color = Color(0.999999, 0.612961, 0.314056, 1)
+
+[node name="MagicIcon" type="TextureRect" parent="DownLeftHUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MagicLine" type="Line2D" parent="DownLeftHUD"]
+visible = false
+position = Vector2(4, 52)
+points = PackedVector2Array(0, 0, 9, 11, 18, 15, 27, 11, 36, 0, 45, -11, 54, -15)
+width = 2.0
+default_color = Color(0.999999, 0.612961, 0.314056, 1)
+
+[node name="EnemyIcon" type="TextureRect" parent="DownLeftHUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyLine" type="Line2D" parent="DownLeftHUD"]
+visible = false
+position = Vector2(4, 52)
+points = PackedVector2Array(0, 0, 9, 11, 18, 15, 27, 11, 36, 0, 45, -11, 54, -15)
+width = 2.0
+default_color = Color(0.999999, 0.612961, 0.314056, 1)

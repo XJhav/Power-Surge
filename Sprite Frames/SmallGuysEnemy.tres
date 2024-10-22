@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://c3uta7ty4jg7b"]
+
+[ext_resource type="Texture2D" uid="uid://bxn7x8l0n26x7" path="res://Sprites/Characters/enemies10.png" id="1_34k3a"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_34k3a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
